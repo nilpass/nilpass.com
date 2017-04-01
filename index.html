@@ -28,7 +28,7 @@
           <h1>NilPass</h1>
           <h2>The only password manager that's <em>truly</em> impenetrable.</h2>
         </hgroup>
-        <a href="https://chrome.google.com/webstore/detail/nilpass/miklfmgiiemncjilpaapopadfdjiaajb" class="button">Get it here</a>
+        <a href="https://chrome.google.com/webstore/detail/nilpass/miklfmgiiemncjilpaapopadfdjiaajb" class="button" id="install">Get it here</a>
       </div>
     </section>
     <section id="explainer" class="explainer">
@@ -172,5 +172,16 @@
         NilPass is a <a href="https://stuartpb.com">Stuart P. Bentley</a> joint.
       </p>
     </footer>
+    <script>
+      /* global chrome */
+      if (typeof chrome != 'undefined') {
+        var installButton = document.getElementById('install');
+        installButton.textContent = "Install now";
+        installButton.addEventListener('click', function (evt) {
+          chrome.webstore.install();
+          evt.preventDefault();
+        });
+      }
+    </script>
   </body>
 </html>
