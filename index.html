@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css" />
+    <link rel="stylesheet" href="/vendor/leaguespartan/stylesheet.css">
+    <link rel="stylesheet" href="/vendor/junction/junction.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>NilPass, the only password manager that's truly impenetrable</title>
+    <meta name="title" content="NilPass">
+    <meta name="og:title" content="NilPass">
+    <meta name="description" content="The only password manager that's truly impenetrable.">
+    <meta name="og:image" content="/images/nilpass-logo-1920px.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/nilpass/miklfmgiiemncjilpaapopadfdjiaajb">
+  </head>
+  <body>
+    <section class="hero">
+      <a class="github-fork-ribbon" href="https://github.com/nilpass/nilpass" title="Fork me on GitHub">Fork me on GitHub</a>
+      <div class="content">
+        <img src="/images/nilpass-logo.svg" class="logo">
+        <hgroup>
+          <h1>NilPass</h1>
+          <h2>The only password manager that's <em>truly</em> impenetrable.</h2>
+        </hgroup>
+        <a href="https://chrome.google.com/webstore/detail/nilpass/miklfmgiiemncjilpaapopadfdjiaajb" class="button">Get it here</a>
+      </div>
+    </section>
+    <section id="explainer" class="explainer">
+      <div class="content">
+        <h2>How it works</h2>
+        <h3>
+          Traditional password managers store strong, complex passwords, for
+          all the different sites you use, in one single, secured location.
+        </h3>
+        <figure>
+          <img src="/images/safe-keys.svg">
+        </figure>
+        <h3>
+          However, this single location also presents a single point of
+          failure, and any weaknesses in it will put all your accounts at risk.
+        </h3>
+        <figure>
+          <img src="/images/safe-tnt.svg">
+        </figure>
+        <h2>NilPass is different.</h2>
+        <h3>
+          When setting up an account, NilPass creates a strong, complex
+          password, which it enters directly, never revealing the password on-screen.
+        </h3>
+        <figure>
+          <img src="/images/nilpass-thinking.svg">
+        </figure>
+        <h3>
+          Then, once the password has been set and the user has been logged
+          in, NilPass dutifully forgets the new password, completely and altogether.
+        </h3>
+        <figure>
+          <img src="/images/nilpass-forgetting.svg">
+        </figure>
+        <h3>
+          The next time you need to log in, you do it by clicking "I forgot my password",
+          getting a password reset link via email, and repeating the above steps.
+        </h3>
+        <figure>
+          <img src="/images/under-the-mat.svg">
+        </figure>
+        <a href="https://chrome.google.com/webstore/detail/nilpass/miklfmgiiemncjilpaapopadfdjiaajb" class="button">Get NilPass</a>
+      </div>
+    </section>
+    <section id="faq" class="ordinary">
+      <div class="content">
+        <h2>F. A. Q.</h2>
+
+        <h3>Seriously?</h3>
+
+        <p><a href="/seriously/">Yes.</a></p>
+
+        <h3>Doesn't that mean anybody who gets into my email could break into my accounts?</h3>
+
+        <p>
+        Yes. That was already the case, whether you use NilPass or not.
+        Without NilPass, they <em>also</em> could get in by guessing your
+        password. All using NilPass does is <em>reduce</em> the number of ways
+        you can get pwned.
+        </p>
+
+        <h3>What if somebody guesses the password that NilPass sets?</h3>
+
+        <p>
+        With 80 bits of cryptographic entropy (what NilPass uses by default),
+        the odds of that are literally <a href="https://en.wikipedia.org/wiki/Power_of_two#The_first_96_powers_of_two">one in a million billion billion</a>.
+        If the NSA dedicated all of their code-cracking computer power just
+        toward cracking your NilPass password, it would take them somewhere on
+        the order of <a href="https://security.stackexchange.com/a/115397/35349"><em>tens of thousands</em> of years</a>
+        to find by <em>brute force</em>.
+        </p>
+
+        <p>
+        I know, 14 characters doesn't look like much, but exponents are tricky
+        like that.
+        </p>
+
+        <h3>How can you call this "impenetrable" when it's just a browser extension?</h3>
+
+        <p>
+        Okay, I concede that the <em>extension itself</em> isn't truly
+        impenetrable - it's only as "impenetrable" as the browser itself. On
+        top of that, the account that publishes the extension could also get
+        potentially compromised at some point in the future. These are valid
+        points. (Of course, they're also points that are true for <em>any
+        other</em> password manager with a browser extension.)
+        </p>
+
+        <p>
+        Where NilPass <em>is</em> impenetrable, in contrast to any conventional
+        "password manager", is in the realm of what could happen <em>to your
+        existing passwords in the event that the manager is compromised</em>.
+        Since NilPass doesn't keep a record of <em>any</em> sort of data that
+        could be used to reconstruct the password, there is <em>no way</em>
+        that your passwords can be stolen from NilPass after the fact in the
+        event that the codebase is compromised.
+        </p>
+
+        <h3>
+        Some of my websites don't offer password reset by email, or if they
+        do, it's really awkward.
+        </h3>
+
+        <p>
+        Well, then don't use NilPass for those websites.
+        </p>
+
+        <p>
+        Look, I'm not saying this is the be-all-end-all of credential
+        management. The truth is, there are some situations out there where
+        it's fully justified to use an <em>actual password</em> - the kind that
+        you actually <em>memorize</em>, and produce <em>from memory</em> every
+        time you need to authenticate yourself.
+        </p>
+
+        <p>
+        The thing is, that's not every site - for the
+        <a href="https://en.wikipedia.org/wiki/Long_tail">long tail</a> of
+        sites people use, where you're only logging in occasionally,
+        maintaining a password is a <em>nuisance</em>, one that is
+        <em>fragile</em> and <em>error-prone</em>. For sites like
+        <em>these</em>, you're better off just <em>disabling password
+        access</em>, and relying on your email inbox as your center of
+        identity (especially since that's likely how the rest of your
+        online life already works anyway, more or less).
+        </p>
+
+        <p>
+        But yeah, if you have a site that you log into frequently, and it's
+        inconvenient to check your email every time, and you want it to be
+        secure, you're better off just using a <em>real</em> password - one you
+        keep in your <em>head</em>, not your computer. (That's not to say you
+        have to memorize it <em>by itself</em> - there are lots of good
+        mnemonic devices you could draw inspiration from. I recommend
+        <a href="https://hashblot.com">Hashblot</a>.)
+        </p>
+      </div>
+    </section>
+    <footer>
+      <p class="content">
+        NilPass is a <a href="https://stuartpb.com">Stuart P. Bentley</a> joint.
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: Junction, sans-serif;
+  display: flex;
+  flex-flow: column;
+  background-color: #222;
+  color: white;
+}
+
+.hero {
+  background-image: url("http://i.imgur.com/WoEVJxv.jpg");
+  background-size: cover;
+  color: white;
+  text-shadow: 6px 4px 15px rgba(0,0,0,0.5);
+  padding-top: 96px;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero .logo {
+  filter: drop-shadow(6px 4px 15px rgba(0,0,0,0.5));
+}
+
+h1, h2, h3 {
+  font-family: League Spartan, sans-serif;
+  font-weight: bold;
+}
+
+.hero h1 {
+  font-size: 136px;
+  margin: .2em 0 0 0;
+}
+
+.hero h2 {
+  font-size: 42px;
+  margin: 0 0 1em;
+}
+
+.explainer {
+  text-align: center;
+  background-color: #46e;
+  color: white;
+  font-size: 32px;
+}
+
+.github-fork-ribbon:before {
+  background-color: #ca3;
+}
+
+.button {
+  font-family: League Spartan, sans-serif;
+  font-weight: bold;
+  font-size: 36pt;
+  background-color: #ca3;
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 16px;
+  margin-bottom: 32px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.75);
+}
+
+.explainer a:link, .explainer a:visited,
+.hero a:link, .hero a:visited,
+header a:link, header a:visited,
+footer a:link, footer a:visited {
+  color: white;
+}
+
+.ordinary {
+  color: #111;
+  background-color: #eee;
+}
+
+.ordinary h2 {
+  text-align: center;
+}
+
+header, footer {
+  height: 48px;
+  flex: none;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}

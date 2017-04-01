@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css">
+    <link rel="stylesheet" href="/vendor/leaguespartan/stylesheet.css">
+    <link rel="stylesheet" href="/vendor/junction/junction.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>Going passwordless with NilPass</title>
+    <meta name="og:image" content="/images/nilpass-logo-1920px.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+  </head>
+  <body class="ordinary content">
+    <header>
+    </header>
+    <p>
+    I want to make this abundantly clear: while the presentation I have on
+    <a href="/">the landing page</a> is designed to sound like a joke, I am
+    <em>completely serious</em> about using NilPass instead of a password
+    manager like LastPass.
+    </p>
+    <p>
+    Auth0 published
+    <a href="https://auth0.com/blog/is-passwordless-authentication-more-secure-than-passwords/">a blog post</a>
+    just a couple of days before I set this site up, all about how "passwordless login" is a better approach
+    to authentication than the traditional password-based authentication most sites offer today. I loved that article,
+    and it's certainly not <em>wrong</em>, but it only goes so far, as it was written from, and for, the perspective of a
+    <em>developer</em>. This perspective gives little to no thought toward this in terms of enfranchisement of any <em>users</em>.
+    </p>
+
+    <p>
+    The thing is, while actual "passwordless login" in the form of an emailed link that in no way engages with
+    passwords has been a slow-to-catch-on feature, the reality is that most sites <em>already</em> have a mechanism
+    that allows us to log into the site with only an email and no password: <em>the "I forgot my password" recovery
+    system</em>, whose presence has been nigh-on <em>ubiquitous</em> in the user account systems of every site I've
+    interacted with, for at least the last <em>decade</em>.
+    </p>
+
+    <p>
+    The only <em>problem</em> in using password recovery mechanisms as a form of authentication lies in the way
+    that most of them require the user to <em>choose a new password</em> when they visit the reset page. If there's
+    <em>any</em> password on the account, it means there's a <em>second</em> way to gain access, <em>on top of</em>
+    the passwordless email entrance. If there's no way to <em>truly altogether disable</em> passwords as a vector for
+    access, the next-best solution is to fill it with enough random data that the odds of <em>stumbling upon</em> the
+    ineliminable password are vanishingly small (ie. so that it would take thousands of years to randomly guess it).
+    </p>
+
+    <p>
+    Unfortunately, humans are <a href="http://www.cs.cmu.edu/~jblocki/HumanRandomness.htm">notoriously bad</a> at picking
+    strong passwords, even if they're <em>trying</em> to be completely random. Not only are there deep biases when humans
+    just try to create a random sequence <em>at all</em> (<a href="http://complexitycalculator.com/hrng/">here</a>'s
+    another demonstration you can try for yourself), but it's <em>compounded</em> by the way that most password input forms
+    require the user to come up with a reproducible password that they must prove by entering it, from memory, <em>twice</em>.
+    </p>
+
+    <p>
+    Enter NilPass. NilPass handles <em>only</em> the generation of an adequately-strong password (its generator is literally
+    just 80 crypto-random bits encoded alphanumerically), and, rather than putting effort toward <em>persisting</em> some
+    means of re-using this dead-end authentication token, NilPass is carefully designed to ensure that the password will
+    become <em>unusable</em> shortly after authentication: even if the user <em>forgets to dispose of it</em>, the password
+    will be eliminated <em>automatically</em>, after a set period of time. Essentially, in the NilPass model, passwords are
+    seen as a legacy <em>artifact</em>, one that must be as thoroughly <em>obscured</em> as possible, so as to leave them
+    effectively <em>eliminated</em> (similar to the approach taken by modern email clients to
+    <a href="http://www.ietf.org/mail-archive/web/ietf-822/current/msg04187.html">MIME boundary strings</a>).
+    </p>
+
+    <p>
+    So yeah, that's the serious design rationale I put into NilPass. Feel free to contact me
+    <a href="https://stuartpb.com/">on whatever</a> with your thoughts.
+    </p>
+
+    <p>Stuart P. Bentley, April 1, 2017</p>
+  </body>
+</html>
